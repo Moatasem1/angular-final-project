@@ -1,0 +1,34 @@
+<section class="welcome-wrapper py-5">
+  <div
+    class="container d-flex flex-column flex-md-row text-center text-md-start align-items-center justify-content-between gap-4 gap-md-5">
+    <h1 class="text-capitalize fw-semibold fs-2 my-0 lh-base">
+      Welcome Back <span>{{user.firstName}}</span> Here are your latest
+      updates.
+    </h1>
+    <button type="button" name="new request" class="btn btn-main text-capitalize">
+      new request
+    </button>
+  </div>
+</section>
+
+<section class="profile-summary py-4">
+  <div class="container">
+    <div class="row gy-4 text-capitalize justify-content-center align-items-stretch">
+      <div class="col-12 col-sm-12 col-xl-6">
+        <app-home-employee-details></app-home-employee-details>
+      </div>
+      @for (leaveRequestDataItem of leaveRequestData ; track leaveRequestDataItem.label) {
+      <div class="col-12 col-sm-6 col-xl-3">
+        <app-leave-requests-number [leaveRequestData]="leaveRequestDataItem"></app-leave-requests-number>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="lates-news py-5">
+  <div class="container text-capitalize">
+    <h2 class="fs-4 fw-semibold mb-3">lates news:</h2>
+    <app-latest-news></app-latest-news>
+  </div>
+</section>

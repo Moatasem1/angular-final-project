@@ -1,0 +1,9 @@
+<div
+  class="statistics text-light bg-main d-flex align-items-center justify-content-center gap-5 shadow p-4 rounded-4 h-100">
+  <div>
+    <fa-icon class="statistics__icon" [icon]="leaveRequestData.icon"></fa-icon>
+    <span class=" d-block text-center lh-sm">{{leaveRequestData.label.split(" ")[0]}} <br>
+      {{leaveRequestData.label.split(" ")[1]}}</span>
+  </div>
+  <span class="statistics__number">{{leaveRequestData.value}}</span>
+</div>

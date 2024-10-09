@@ -1,0 +1,23 @@
+#lates-news-carousel img {
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  #lates-news-carousel img {
+    aspect-ratio: 4 / 1;
+  }
+
+}
+
+#lates-news-carousel .carousel-caption {
+  background-color: hsl(0, 0%, 100%, 80%);
+}
+
+#lates-news-carousel .carousel-indicators button {
+  width: .7rem;
+  height: .7rem;
+  border-radius: 100%;
+  background-color: var(--color-subtext);
+}
