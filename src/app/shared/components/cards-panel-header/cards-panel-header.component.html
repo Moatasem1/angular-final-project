@@ -1,0 +1,16 @@
+<header class="cards-panel__header-container">
+  <div class="cards-panel-header d-lg-flex align-items-center pb-4">
+    <div class="d-flex align-items-center">
+      <fa-icon [icon]="cardsPanelHeader.icon" class="text-theme fs-2 me-3" aria-hidden="true"></fa-icon>
+      <h2 class="fs-4 fw-semibold mb-0">{{cardsPanelHeader.name}}</h2>
+    </div>
+
+    @if(cardsPanelHeader.withSearch){
+    <div class="cards-panel-header__search-bar d-flex align-items-center rounded-pill px-3 mt-4 mt-lg-0 ms-auto">
+      <fa-icon [icon]="faMagnifyingGlass" class="text-theme"></fa-icon>
+      <input #searchRef (keyup)="onSearch(searchRef.value)" type="text"
+        class="cards-panel-header__search-input form-control" name="cards panel search bar" placeholder="Search...">
+    </div>
+    }
+  </div>
+</header>

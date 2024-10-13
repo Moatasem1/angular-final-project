@@ -1,0 +1,25 @@
+<nav class="navbar shadow navbar-expand-sm bg-main text-light">
+  <div class="container">
+    <div class="navbar__icons-wrapper py-1 d-flex gap-4 order-sm-2">
+      <fa-icon role="button" class="navbar__icon fs-4" [icon]="faBell"></fa-icon>
+      <fa-icon role="button" class="navbar__icon fs-4" [icon]="faCircleUser"></fa-icon>
+    </div>
+    <button class="navbar-toggler d-sm-none border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon d-flex align-items-center">
+        <span class="navbar-toggler-icon__dash d-block position-relative"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse text-capitalize" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-sm-0 gap-3">
+        @for (navbarTab of navBarTabs; track navbarTab.path) {
+        <li class="nav-item">
+          <a class="nav-link py-1 px-2 position-relative text-light" [routerLink]="navbarTab.path"
+            ariaCurrentWhenActive="page" routerLinkActive="active">{{navbarTab.label}}</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChartLine, faUser } from '@fortawesome/free-solid-svg-icons';
-import { UserService } from '../../../core/services/user.service';
-import { UserDetailsBlockComponent } from '../../../shared/components/user-details-block/user-details-block.component';
-import { UserDetails } from '../../../shared/interfaces';
+import { UserService } from '../../../../core/services/user.service';
+import { UserDetailsBlockComponent } from '../../../../shared/components/user-details-block/user-details-block.component';
+import { UserDetails } from '../../../../shared/interfaces';
 
 @Component({
   selector: 'app-home-employee-details',

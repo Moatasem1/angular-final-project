@@ -1,0 +1,13 @@
+<div class="text-capitalize bg-secondary p-4 rounded-4 shadow" id="vacation-requests-panel">
+  <app-cards-panel-header [cardsPanelHeader]="cardsPanelHeader"
+    (searchPerformed)="onSearch($event)"></app-cards-panel-header>
+  <ng-content></ng-content>
+  <footer class="fw-semibold mt-3">
+    <a [routerLink]="viewMorePath" routerLinkActive="router-link-active" type="button" view="more"
+      name="view-more vacation requests"
+      class="cards-panel__view-more-btn mt-4 text-decoration-none d-flex align-items-center justify-content-end gap-1 text-theme">
+      <span>view more</span>
+      <fa-icon [icon]="faAngleRight" class="mt-1" aria-hidden="true"></fa-icon>
+    </a>
+  </footer>
+</div>

@@ -1,0 +1,36 @@
+<div class="vacation-requests-card shadow-card text-center bg-background p-3 rounded">
+  <header>
+    <img class="vacation-requests-card__img rounded-pill shadow-sm" [src]="vacationRequest.imagePath"
+      alt="image not found">
+    <h3 class="vacation-requests-card__employee-name fs-5 fw-semibold mt-2" [innerHTML]="vacationRequest.fullName |
+      Highlight:searchQuery"></h3>
+  </header>
+  <main class="text-start mt-3 fs-14">
+    <div>
+      <span>submitted on:</span>
+      <span class="d-block fw-semibold text-secondary mb-2" [innerHTML]='vacationRequest.submittedOn |
+      date:"dd/MM/yyyy" |
+      Highlight:searchQuery'></span>
+    </div>
+    <div>
+      <span>Duration:</span>
+      <span class="d-block fw-semibold text-secondary mb-2" [innerHTML]="vacationRequest.duration |
+        Highlight:searchQuery"></span>
+    </div>
+    <div>
+      <span>salary:</span>
+      <span class="d-block fw-semibold text-secondary mb-2" [innerHTML]="vacationRequest.salary |
+        Highlight:searchQuery"></span>
+    </div>
+  </main>
+  <footer class="mt-4 d-flex align-items-center gap-3">
+    <button (click)="approve()" type="button" name="vacation requests card decline button"
+      id="vacation-requests-card-decline-button-41" class="btn btn-secondary w-100">
+      decline
+    </button>
+    <button (click)="decline()" type="button" name="vacation requests card approve button"
+      id="vacation-requests-card-approve-button-41" class="btn btn-main w-100">
+      Approve
+    </button>
+  </footer>
+</div>

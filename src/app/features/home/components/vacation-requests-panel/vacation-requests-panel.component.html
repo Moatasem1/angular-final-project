@@ -1,0 +1,11 @@
+<app-cards-panel [cardsPanelHeader]="cardsPanelHeader" [viewMorePath]="'/vacation-requests'"
+  (searchPerformed)="filterVacationRequests($event)">
+  <main class="cards-panel__cards-container mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 gy-4">
+    @for (vacationRequest of filteredVacationRequests; track vacationRequest.id ) {
+    <div class="col cards-panel__item">
+      <app-vacation-request-card-col [searchQuery]="searchQuery"
+        [vacationRequest]="vacationRequest"></app-vacation-request-card-col>
+    </div>
+    }
+  </main>
+</app-cards-panel>

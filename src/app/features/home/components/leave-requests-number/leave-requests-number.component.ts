@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ILeaveRequest } from '../interfaces';
+import { ILeaveRequest } from '../../interfaces';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({

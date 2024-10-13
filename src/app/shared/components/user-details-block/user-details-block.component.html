@@ -1,0 +1,9 @@
+<div class="user-profile__data d-flex flex-column flex-md-row gap-3 align-items-center">
+  <fa-icon [icon]="userDetails.icon" class="fs-1 text-secondary"></fa-icon>
+  <div>
+    <h4 class="fs-6 fw-semibold mb-1">{{userDetails.label}}</h4>
+    <span id="corporate-level" class="text-secondary">
+      {{userDetails.prefix + " " + userDetails.value + " "+userDetails.suffix}}
+    </span>
+  </div>
+</div>

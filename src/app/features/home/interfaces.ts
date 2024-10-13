@@ -5,3 +5,9 @@ export interface ILeaveRequest {
   label: string;
   value: number;
 }
+
+export interface IlatestNewsSlide {
+  imagePath: string;
+  title: string;
+  desc: string;
+}
