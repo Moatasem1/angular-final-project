@@ -7,5 +7,10 @@
         [vacationRequest]="vacationRequest"></app-vacation-request-card-col>
     </div>
     }
+    @empty {
+    <div class="flex-grow-1 text-center">
+      no vacation requests
+    </div>
+    }
   </main>
 </app-cards-panel>

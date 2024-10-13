@@ -1,0 +1,22 @@
+<div class="user-profile shadow p-4 rounded-4 bg-secondary h-100 text-center text-md-start">
+  <header class="user-profile__header d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <div class="user-profile__info d-flex flex-column flex-md-row align-items-center gap-3">
+      <figure class="user-profile__img-wrapper d-flex align-items-center rounded-pill mb-0 overflow-hidden">
+        <img [src]="user.imagePath" alt="user image not found" class="img-fluid hoverZoomLink">
+      </figure>
+      <div class="user-profile__name-job-wrapper text-capitalize">
+        <h2 class="fs-5 mb-0 fw-semibold">{{user.fullName}}</h2>
+        <span class=" d-block">{{user.department}} department</span>
+        <span class="text-secondary">{{user.job}}</span>
+      </div>
+    </div>
+    <a name="view profile" id="view-profile" class="btn btn-secondary" href="/pages/profiles.html" role="button">view
+      profile</a>
+  </header>
+  <div
+    class="user-profile__data-wrapper d-flex flex-wrap mt-5 gap-5 justify-content-center justify-content-md-start justify-content-lg-between">
+    @for (userDetail of userDetails; track userDetail.label) {
+    <app-user-details-block [userDetails]="userDetail"></app-user-details-block>
+    }
+  </div>
+</div>
