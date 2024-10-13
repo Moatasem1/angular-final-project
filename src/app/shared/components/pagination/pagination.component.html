@@ -1,0 +1,23 @@
+<nav class="mt-5 vacation-request__pagination" aria-label="vacation request navigation example">
+  <ul class="pagination shadow-sm w-fit mx-auto gap-2 bg-secondary py-2 px-3 rounded-pill">
+    <li (click)="prevPage()" role="button" page="prev" [ngClass]="{'page-item--disable': currentPage==1}"
+      class="page-item  rounded-pill d-flex align-items-center justify-content-center">
+      <!--<i class="fa-solid fa-angle-left fs-5"></i>-->
+      prev
+    </li>
+    <div class="d-flex align-items-center pagination__numbers">
+      @for (page of pages; track page) {
+      <li role="button" [attr.page]="page" [ngClass]="{'page-item--active':page===currentPage}"
+        class="page-item  rounded-pill d-flex align-items-center justify-content-center">
+        {{page}}
+      </li>
+      }
+    </div>
+    <li (click)="nextPage()" role="button" page="next" [ngClass]="{'page-item--disable': currentPage==pagesNumber}"
+      class=" page-item rounded-pill
+      d-flex align-items-center justify-content-center">
+      <!--<i class="fa-solid fa-angle-left fs-5"></i>-->
+      next
+    </li>
+  </ul>
+</nav>

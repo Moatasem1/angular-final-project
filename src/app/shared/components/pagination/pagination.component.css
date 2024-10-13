@@ -1,0 +1,16 @@
+.pagination .page-item {
+  width: 2rem;
+  height: 2rem;
+  transition: .3s;
+}
+
+.pagination .page-item.page-item--active {
+  color: var(--color-text-light);
+  background-color: var(--color-main);
+}
+
+.pagination .page-item.page-item--disable {
+  color: var(--color-subtext);
+  pointer-events: none;
+  opacity: .6;
+}

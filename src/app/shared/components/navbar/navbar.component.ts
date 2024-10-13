@@ -38,7 +38,7 @@ export class NavbarComponent {
   constructor() {
     this.navBarTabs = [
       { label: 'home', path: '/home' },
-      { label: 'requests', path: '/requests' },
+      { label: 'requests', path: '/vacation-requests' },
       { label: 'profiles', path: '/profiles' },
       { label: 'reports', path: '/reports' },
       { label: 'settings', path: '/settings' },
