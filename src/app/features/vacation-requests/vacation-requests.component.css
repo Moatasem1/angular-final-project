@@ -1,0 +1,39 @@
+/* ----------------------- start select all control ----------------------- */
+
+.vacation-request-action {
+  max-width: 600px;
+}
+
+.controls__checkbox {
+  width: .9rem;
+  height: .9rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-main);
+  box-sizing: content-box;
+}
+
+.controls__checkbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(0);
+  scale: 0;
+  transition: .3s;
+}
+
+.controls__select-all:checked+label .controls__checkbox {
+  background-color: var(--color-main);
+}
+
+.controls__select-all:checked+label .controls__checkbox::after {
+  transform: rotate(45deg);
+  scale: 1;
+}
+
+/* ----------------------- end select all control ----------------------- */

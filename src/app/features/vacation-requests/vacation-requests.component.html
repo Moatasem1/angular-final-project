@@ -1,0 +1,33 @@
+<section class="vacation-requests py-5">
+  <div class="container">
+    <app-cards-panel-header class="text-capitalize" (searchPerformed)="searchPerformed($event)"
+      [cardsPanelHeader]="cardsPanelHeader"></app-cards-panel-header>
+    <header class="controls pt-2 pb-3 d-flex justify-content-between text-capitalize">
+      <div class="d-flex align-items-center gap-2">
+        <input [(ngModel)]="isAllSelected" (change)="toggleSelectAll()" type="checkbox" id="select-all" role="button"
+          class="d-none controls__select-all">
+        <label role="button" for="select-all" class="text-secondary d-flex align-items-center gap-2">
+          <span class="controls__checkbox position-relative"></span>
+          <span>select all</span>
+        </label>
+      </div>
+      <fa-icon [icon]="faFilter" role="button" class="fa-solid fa-filter fs-2 text-secondary"
+        aria-hidden="true"></fa-icon>
+    </header>
+    <main class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 gy-4 vacation-requests__cards-wrapper">
+      @for (vacationRequest of vacationRequests | vacationRequestsFilter:searchQuery; track vacationRequest.id) {
+      <div class="col cards-panel__item">
+        <app-vacation-request-card-horizontal [vacationRequest]="vacationRequest" [searchQuery]="searchQuery"
+          (selected)="toggleCard($event)"
+          [isChecked]="vacationRequest.isChecked"></app-vacation-request-card-horizontal>
+      </div>
+      }
+      @empty {
+      <div class="flex-grow-1 text-center">no vacation request</div>
+      }
+    </main>
+    <footer>
+      <app-pagination [maxViewpagesNumber]="4" [pagesNumber]="5" (pageChanged)="updatePage($event)"></app-pagination>
+    </footer>
+  </div>
+</section>

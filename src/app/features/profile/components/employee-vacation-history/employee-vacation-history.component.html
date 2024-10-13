@@ -1,0 +1,9 @@
+<app-cards-panel [cardsPanelHeader]="cardsPanelHeader" [viewMorePath]="''">
+  <div class="cards-panel__cards-container mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 gy-4">
+    @for (vacationHistory of vacationsHistory; track vacationHistory.id) {
+    <div class="col">
+      <app-vacation-history-card [vacationHistory]="vacationsHistory[$index]"></app-vacation-history-card>
+    </div>
+    }
+  </div>
+</app-cards-panel>

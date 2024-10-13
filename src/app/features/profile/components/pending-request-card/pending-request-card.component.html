@@ -1,0 +1,22 @@
+<div class="pending-requests-card shadow-card  text-center bg-background p-3 rounded">
+  <header>
+    <img class="pending-requests-card__img rounded-pill shadow-sm" [src]="user.imagePath" alt="Ahamd image not found">
+    <h3 class="pending-requests-card__employee-name fs-5 fw-semibold mt-2">{{user.fullName}}</h3>
+  </header>
+  <main class="text-start mt-3 fs-14">
+    <div>
+      <span>submitted on:</span>
+      <span class="d-block fw-semibold text-secondary mb-2">{{pendingRequest.submittedOn | date:'dd/MM/yyyy'}}</span>
+    </div>
+    <div>
+      <span>Duration:</span>
+      <span class="d-block fw-semibold text-secondary mb-2">{{pendingRequest.duration}} days
+        ({{pendingRequest.startDate | date:'dd/MM/yyyy'}} -
+        {{pendingRequest.endDate | date:'dd/MM/yyyy'}})</span>
+    </div>
+  </main>
+  <footer class="mt-4 text-start">
+    <span class="d-block">currently at:</span>
+    <span class="text-theme fw-semibold">{{pendingRequest.currentlyAt}}</span>
+  </footer>
+</div>

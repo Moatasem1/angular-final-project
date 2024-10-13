@@ -1,0 +1,14 @@
+<app-cards-panel [cardsPanelHeader]="cardsPanelHeader" [viewMorePath]="''">
+  <div class="cards-panel__cards-container mt-4 row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 gy-4">
+    @for (pendingRequest of pendingRequests; track pendingRequest.id) {
+    <div class="col">
+      <app-pending-request-card [pendingRequest]="pendingRequests[$index]"></app-pending-request-card>
+    </div>
+    }
+    @empty {
+    <div class="felx-grow-1 text-center">
+      no pending requests
+    </div>
+    }
+  </div>
+</app-cards-panel>

@@ -11,6 +11,4 @@ import { ProfileComponent } from './features/profile/profile.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'angular-task';
-}
+export class AppComponent {}

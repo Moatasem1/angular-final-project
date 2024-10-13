@@ -47,6 +47,7 @@ export class VacationRequests implements IVacationRequests {
   private _startDate: string;
   private _endDate: string;
   private _salary: number;
+  private _isChecked: boolean;
 
   constructor(data: IVacationRequests) {
     this._id = data.id;
@@ -57,6 +58,15 @@ export class VacationRequests implements IVacationRequests {
     this._startDate = data.startDate;
     this._endDate = data.endDate;
     this._salary = data.salary;
+    this._isChecked = false;
+  }
+
+  get isChecked(): boolean {
+    return this._isChecked;
+  }
+
+  set isChecked(value: boolean) {
+    this._isChecked = value;
   }
 
   get id(): string {

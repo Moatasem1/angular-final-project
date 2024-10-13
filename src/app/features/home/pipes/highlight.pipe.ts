@@ -6,15 +6,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class HighlightPipe implements PipeTransform {
   transform(value: any, searchQuery: string): string {
-    searchQuery = searchQuery.trim().toLowerCase();
-
+    searchQuery = searchQuery.trim();
     if (!value || !searchQuery) {
       return value;
     }
 
-    return value
-      .toString()
-      .toLocaleLowerCase()
-      .replace(searchQuery, `<span class='highlight'>${searchQuery}</span>`);
+    const regex = new RegExp(searchQuery, 'gi');
+
+    return value.toString().replace(regex, (match: string) => {
+      return `<span class='highlight'>${match}</span>`;
+    });
   }
 }

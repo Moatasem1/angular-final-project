@@ -1,0 +1,17 @@
+.vacation-requests-card__img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.vacation-requests-card__select-icon {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  right: 1rem;
+  top: 1rem;
+  color: var(--color-subtext);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .3s;
+}

@@ -1,0 +1,8 @@
+<div class="vacation-history-card shadow-card p-3 bg-background rounded">
+  <h2 class="fs-5 fw-semibold">{{vacationHistory.type}} vacation</h2>
+  <p class="text-secondary mb-3 fw-medium">
+    {{vacationHistory.startDate | date:'dd/MM/yyyy'}} - {{vacationHistory.endDate | date:'dd/MM/yyyy'}}
+    <span class="fw-semibold ms-1">{{vacationHistory.getDurationInDays()}} Days</span>
+  </p>
+  <span class="text-secondary fw-medium">approved by: Salwa Assem</span>
+</div>

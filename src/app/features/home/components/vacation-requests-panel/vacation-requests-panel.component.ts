@@ -36,7 +36,11 @@ export class VacationRequestsPanelComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const vacationRequests = this.vacationRuquestService.getVacationRequests();
+    const vacationRequests =
+      this.vacationRuquestService.getLatestVacationRequests(
+        4,
+        this.searchQuery
+      );
     this.vacationRequests = vacationRequests.map(
       (request) => new VacationRequests(request)
     );
